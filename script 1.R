@@ -11,3 +11,4 @@ ggplot(data) +
   facet_wrap(~island) +
   labs(x="Bill length (mm)",y="Bill depth (mm)",title="Relationships between bill length and bill depth in penguins")+
   theme_bw()
+str(data)

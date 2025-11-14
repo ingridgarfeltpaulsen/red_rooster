@@ -10,10 +10,10 @@ ggplot(data, aes(x=bill_length_mm,y=bill_depth_mm,colour=species))+
   geom_point() +
   facet_wrap(~island) +
   geom_smooth(method="gam")+
-  labs(x="Bill length (mm)",y="Bill depth (mm)",title="Beak differences between islands")
+  labs(x="Bill length (mm)",y="Bill depth (mm)",title="Beak differences between islands")+
+theme_bw()
 str(data)
 
-
-
+#I will make some changes to this file
 
 usethis::use_readme_rmd()

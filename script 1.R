@@ -6,9 +6,13 @@ library(tidyverse)
 data<-palmerpenguins::penguins
 str(data)
 
-ggplot(data) +
-  geom_point(aes(x=bill_length_mm,y=bill_depth_mm,colour=species)) +
+ggplot(data, aes(x=bill_length_mm,y=bill_depth_mm,colour=species))+
+  geom_point() +
   facet_wrap(~island) +
-  labs(x="Bill length (mm)",y="Bill depth (mm)",title="Relationships between bill length and bill depth in penguins")+
+  geom_smooth(method="lm")+
+  labs(x="Bill length (mm)",y="Bill depth (mm)",title="Beak differences between islands")+
   theme_bw()
 str(data)
+
+
+usethis::use_readme_rmd()
